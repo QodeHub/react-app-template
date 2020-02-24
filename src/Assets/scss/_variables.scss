@@ -1,0 +1,40 @@
+// colors
+$default: #000;
+$green: #44ab65;
+$red: #da3d2a;
+$pale-grey: #fafbfc;
+
+$colors: () !default;
+
+$colors: map-merge(
+  (
+    "default": $default,
+    "green": $green,
+    "red": $red,
+    "pale-grey": $pale-grey
+  ),
+  $colors
+);
+
+// grids
+$grids: (
+  (
+    name: "sm",
+    grid: 0
+  ),
+  (
+    name: "md",
+    grid: 768
+  ),
+  (
+    name: "lg",
+    grid: 992
+  ),
+  (
+    name: "xl",
+    grid: 1200
+  )
+);
+
+// font weights
+$weights: (400, 500, 600, 700, 800);

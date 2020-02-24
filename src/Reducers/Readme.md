@@ -1,0 +1,1 @@
+This is where global states are initialised and handled

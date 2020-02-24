@@ -1,0 +1,132 @@
+// colors
+@each $name, $color in $colors {
+  .#{$name}-bg {
+    background-color: $color !important;
+  }
+
+  .#{$name}-text {
+    color: $color !important;
+  }
+}
+
+// font sizes
+@each $grid in $grids {
+  $grid-name: map-get(
+    $map: $grid,
+    $key: name
+  );
+  $grid-numb: map-get(
+    $map: $grid,
+    $key: grid
+  );
+
+  @if $grid-name== "sm" {
+    $grid-name: "";
+  } @else {
+    $grid-name: $grid-name + "-";
+  }
+
+  @media (min-width: #{$grid-numb}px) {
+    // for font size
+    $font-size: 10;
+
+    @while $font-size <=44 {
+      .font-size-#{$grid-name}#{$font-size} {
+        font-size: #{$font-size}px !important;
+      }
+      $font-size: $font-size + 2;
+    }
+
+    // for font weight
+    @each $weight in $weights {
+      .font-weight-#{$grid-name}#{$weight} {
+        font-weight: #{$weight} !important;
+      }
+    }
+
+    // margins and paddings
+    $space: 6;
+
+    @while $space <=44 {
+      .m-#{$grid-name}#{$space} {
+        margin: #{$space}px !important;
+      }
+
+      .mt-#{$grid-name}#{$space} {
+        margin-top: #{$space}px !important;
+      }
+
+      .mr-#{$grid-name}#{$space} {
+        margin-right: #{$space}px !important;
+      }
+
+      .mb-#{$grid-name}#{$space} {
+        margin-bottom: #{$space}px !important;
+      }
+
+      .ml-#{$grid-name}#{$space} {
+        margin-left: #{$space}px !important;
+      }
+
+      .mx-#{$grid-name}#{$space} {
+        margin-left: #{$space}px !important;
+        margin-right: #{$space}px !important;
+      }
+
+      .my-#{$grid-name}#{$space} {
+        margin-top: #{$space}px !important;
+        margin-bottom: #{$space}px !important;
+      }
+
+      .p-#{$grid-name}#{$space} {
+        padding: #{$space}px !important;
+      }
+
+      .pt-#{$grid-name}#{$space} {
+        padding-top: #{$space}px !important;
+      }
+
+      .pr-#{$grid-name}#{$space} {
+        padding-right: #{$space}px !important;
+      }
+
+      .pb-#{$grid-name}#{$space} {
+        padding-bottom: #{$space}px !important;
+      }
+
+      .pl-#{$grid-name}#{$space} {
+        padding-left: #{$space}px !important;
+      }
+
+      .px-#{$grid-name}#{$space} {
+        padding-left: #{$space}px !important;
+        padding-right: #{$space}px !important;
+      }
+
+      .py-#{$grid-name}#{$space} {
+        padding-top: #{$space}px !important;
+        padding-bottom: #{$space}px !important;
+      }
+
+      $space: $space + 2;
+    }
+
+    $auto: "auto";
+
+    .mx-#{$grid-name}#{$auto} {
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    // buttons
+    @each $i in (32, 36, 40, 48, 56, 64, 72) {
+      .btn-#{$grid-name}#{$i} {
+        height: #{$i}px !important;
+      }
+    }
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}

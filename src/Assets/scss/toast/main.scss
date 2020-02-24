@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+@import "variables";
+@import "toastContainer";
+@import "toast";
+@import "progressBar";
+
+// entrance and exit animations
+@import "animations/slide.scss";
+@import "animations/bounce";
+// @import "animations/flip";
+// @import "animations/zoom";
