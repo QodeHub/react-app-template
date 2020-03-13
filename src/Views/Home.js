@@ -1,16 +1,12 @@
-import React, { useGlobal } from "reactn";
-import { useTitle } from "Utils";
+import React from "react";
+import { Switch, Route } from "react-router-dom";
+
+import Index from "./Home/";
 
 export default function Home() {
-  /**
-   * set title
-   */
-  useTitle("Larry Buntus");
-
-  /**
-   * state
-   */
-  const [user] = useGlobal("user");
-
-  return <p>Home {user?.name}</p>;
+  return (
+    <Switch>
+      <Route exact path="/" component={Index} />
+    </Switch>
+  );
 }
