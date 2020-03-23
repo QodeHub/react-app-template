@@ -22,7 +22,7 @@
     "react": "^16.13.1",
     "react-app-rewired": "^2.1.5",
     "react-axios": "^2.0.3",
-    "react-bootstrap": "^1.0.0-beta.16",
+    "react-bootstrap": "^1.0.0-beta.17",
     "react-dom": "^16.13.1",
     "react-fade-in": "^0.1.8",
     "react-if": "^3.4.3",
@@ -57,7 +57,7 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^3.0.0",
+    "eslint": "^6.8.0",
     "eslint-plugin-react": "^7.19.0"
   }
 }
