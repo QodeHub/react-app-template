@@ -1,17 +1,19 @@
 // colors
-$default: #000;
-$green: #44ab65;
 $red: #da3d2a;
+$green: #44ab65;
+$default: #000000;
 $pale-grey: #fafbfc;
+$light-periwinkle: #dfe2e6;
 
 $colors: () !default;
 
 $colors: map-merge(
   (
-    "default": $default,
-    "green": $green,
     "red": $red,
-    "pale-grey": $pale-grey
+    "green": $green,
+    "default": $default,
+    "pale-grey": $pale-grey,
+    "light-periwinkle": $light-periwinkle,
   ),
   $colors
 );
@@ -20,19 +22,19 @@ $colors: map-merge(
 $grids: (
   (
     name: "sm",
-    grid: 0
+    grid: 0,
   ),
   (
     name: "md",
-    grid: 768
+    grid: 768,
   ),
   (
     name: "lg",
-    grid: 992
+    grid: 992,
   ),
   (
     name: "xl",
-    grid: 1200
+    grid: 1200,
   )
 );
 

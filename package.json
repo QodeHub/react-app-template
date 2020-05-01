@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/plugin-syntax-export-default-from": "^7.8.3",
     "@testing-library/dom": "^7.1.1",
     "@testing-library/jest-dom": "^4.2.4",
@@ -29,7 +30,9 @@
     "react-loading-skeleton": "^2.0.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",
+    "react-select": "^3.1.0",
     "react-spinners": "^0.7.1",
+    "react-textarea-autosize": "^7.1.2",
     "react-toastify": "^5.5.0",
     "reactn": "^2.2.6",
     "typescript": "^3.8.3",
