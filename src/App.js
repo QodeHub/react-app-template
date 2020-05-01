@@ -21,9 +21,7 @@ export default function App() {
   return (
     <ErrorBoundary>
       <AxiosProvider instance={Http}>
-        <div className="h-100 w-100">
-          <Routes />
-        </div>
+        <Routes />
       </AxiosProvider>
       <ToastContainer />
     </ErrorBoundary>

@@ -4,6 +4,8 @@ import React from "react";
  */
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+import { ScrollToTop } from "Components";
+
 /**
  * Route to base components
  */
@@ -12,6 +14,7 @@ import Home from "Views/Home";
 export default function Routes() {
   return (
     <Router>
+      <ScrollToTop />
       <Switch>
         <Route exact path="/" component={Home} />
       </Switch>
@@ -37,4 +40,4 @@ export default function Routes() {
  * namedRoutes.settings.profile
  * ....
  */
-export const namedRoutes = () => ({ home: { index: "/" } });
+export const namedRoutes = { home: { index: "/" } };
