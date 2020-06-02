@@ -1,9 +1,9 @@
 import React, { Fragment } from "react";
 import { Table as VendorTable } from "react-bootstrap";
 
-export function Td({ center, right, left, children, className }) {
+export function Td({ center, right, left, children, className, ...props }) {
   return (
-    <td>
+    <td {...props}>
       <div
         className={`td justify-content-${
           (center && "center") || (right && "end") || (left && "start")
@@ -15,9 +15,9 @@ export function Td({ center, right, left, children, className }) {
   );
 }
 
-export function Th({ children, left, right, center }) {
+export function Th({ children, left, right, center, ...props }) {
   return (
-    <th>
+    <th {...props}>
       <div
         className={`th justify-content-${
           (center && "center") || (right && "end") || (left && "start")
@@ -29,24 +29,22 @@ export function Th({ children, left, right, center }) {
   );
 }
 
-export default function Table({ header, headingSide, children, className }) {
+export default function Table({ header, headingSide, children, ...props }) {
   return (
     <div className="table-container">
       {(header || headingSide) && (
         <Fragment>
-          <div className="d-flex align-items-center justify-content-between mb-4">
-            {header && (
-              <h1 className="mb-0 font-size-18 font-size-md-24 font-weight-600">
-                {header}
-              </h1>
-            )}
+          <div className="d-flex align-items-center justify-content-between mb-32">
+            {header}
             {headingSide}
           </div>
         </Fragment>
       )}
-      <VendorTable responsive striped hover borderless className={className}>
-        {children}
-      </VendorTable>
+      <div
+        className={`table-responsive ${!(header || headingSide) && "h-100"}`}
+      >
+        <VendorTable {...props}>{children}</VendorTable>
+      </div>
     </div>
   );
 }

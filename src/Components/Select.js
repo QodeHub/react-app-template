@@ -1,7 +1,8 @@
 import React from "react";
 import Select, { components } from "react-select";
-import { ErrorBoundary } from "Utils";
 import { Image } from "react-bootstrap";
+
+import { ErrorBoundary } from "Utils";
 
 const { Control, Option, SingleValue } = components;
 
@@ -70,11 +71,13 @@ export default function CustomSelect({
     <ErrorBoundary>
       <Select
         {...props}
-        defaultValue={options.find(
-          (option) =>
-            (option.value || "").toString()?.toLowerCase() ===
-            (value || "").toString()?.toLowerCase()
-        )}
+        defaultValue={
+          options.find(
+            (option) =>
+              (option.value || "").toString()?.toLowerCase() ===
+                (value || "").toString()?.toLowerCase() || ""
+          ) || ""
+        }
         options={_options}
         components={SelectComponents}
         styles={{ menuList: () => ({ paddingTop: 0, paddingBottom: 0 }) }}

@@ -3,7 +3,7 @@ import React from "reactn";
  * packages
  */
 import { ToastContainer } from "react-toastify";
-import { AxiosProvider } from "react-axios";
+import { SWRConfig } from "swr";
 
 /**
  * others
@@ -20,9 +20,16 @@ reducer();
 export default function App() {
   return (
     <ErrorBoundary>
-      <AxiosProvider instance={Http}>
+      <SWRConfig
+        value={{
+          fetcher: (url) => Http.get(url).then(({ responses }) => responses),
+          shouldRetryOnError: false,
+          errorRetryInterval: 0,
+          errorRetryCount: 2,
+        }}
+      >
         <Routes />
-      </AxiosProvider>
+      </SWRConfig>
       <ToastContainer />
     </ErrorBoundary>
   );
