@@ -9,7 +9,7 @@ export default function Home() {
 
   return (
     <div className="justify-content-center align-items-center d-flex h-100 w-100 position-absolute">
-      <h1 className="mb-0">Your beautify template</h1>
+      <h1 className="mb-0">Your beautiful template</h1>
     </div>
   );
 }
