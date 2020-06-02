@@ -7,17 +7,20 @@
   .#{$name}-text {
     color: $color !important;
   }
+  .#{$name}-border {
+    border-color: $color !important;
+  }
 }
 
 // font sizes
 @each $grid in $grids {
   $grid-name: map-get(
     $map: $grid,
-    $key: name
+    $key: name,
   );
   $grid-numb: map-get(
     $map: $grid,
-    $key: grid
+    $key: grid,
   );
 
   @if $grid-name== "sm" {
@@ -127,6 +130,6 @@
   }
 }
 
-.pointer {
+.-cursor-pointer {
   cursor: pointer;
 }
