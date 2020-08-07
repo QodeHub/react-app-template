@@ -1,10 +1,10 @@
-Every parent components have must be in the view.
+Every parent component must be in the view.
 
 If there are different sections of the app, say `authentication` and `dashboard`, directories have to be created. The directory naming should be very clear, say `auth` and `dashoard`.
 
 Each directory must have a root component. If there are sub routes for that component, a directory much be created that corresponds with the name of the component and all sub component must be in the directory. The root component of that directory must handle all the routing.
 
-If there are general component for just one component directory, create a component directory in the directory that is accessible by the components in that directory.
+If there are general component for just one component directory, create a component directory in the directory that is accessible by the components of that directory.
 
 Example
 

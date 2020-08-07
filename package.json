@@ -24,7 +24,6 @@
     "react-dom": "^16.13.1",
     "react-fade-in": "^0.1.8",
     "react-if": "^3.4.3",
-    "react-loading-skeleton": "^2.0.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",
     "react-select": "^3.1.0",

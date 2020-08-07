@@ -31,12 +31,7 @@ export function Content({ children, ...props }) {
   );
 }
 
-export default function CustomSelect({
-  options,
-  onlyOptions,
-  value,
-  ...props
-}) {
+export default ({ options, onlyOptions, value, ...props }) => {
   const SelectComponents = {
     Option: ({ children, ...props }) => (
       <Option {...props}>
@@ -57,6 +52,7 @@ export default function CustomSelect({
   };
 
   let _options = options;
+  let _value = "";
 
   if (onlyOptions) {
     _options = options.filter(
@@ -67,21 +63,32 @@ export default function CustomSelect({
     );
   }
 
+  if (value) {
+    if (typeof value === "string") {
+      _value =
+        options.find(
+          (option) =>
+            (option.value || "").toString()?.toLowerCase() ===
+              (value || "").toString()?.toLowerCase() || ""
+        ) || "";
+    }
+
+    if (Array.isArray(value)) {
+      _value = options.filter((option) =>
+        value.includes((option.value || "").toString())
+      );
+    }
+  }
+
   return (
     <ErrorBoundary>
       <Select
         {...props}
-        defaultValue={
-          options.find(
-            (option) =>
-              (option.value || "").toString()?.toLowerCase() ===
-                (value || "").toString()?.toLowerCase() || ""
-          ) || ""
-        }
+        value={_value}
         options={_options}
         components={SelectComponents}
         styles={{ menuList: () => ({ paddingTop: 0, paddingBottom: 0 }) }}
       />
     </ErrorBoundary>
   );
-}
+};

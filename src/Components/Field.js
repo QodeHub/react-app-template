@@ -1,26 +1,25 @@
 import React from "react";
-import PropTypes from "prop-types";
-
 import { ErrorMessage, Field } from "formik";
 import { Form } from "react-bootstrap";
+// import PropTypes from "prop-types";
 
 import { ErrorBoundary } from "Utils";
 
 /**
  * props
  */
-const propTypes = {
-  containerProps: PropTypes.object,
-  startadornment: PropTypes.object,
-  endadornment: PropTypes.object,
-  placeholder: PropTypes.string,
-  label: PropTypes.object,
-  value: PropTypes.string,
-  name: PropTypes.string.isRequired,
-  type: PropTypes.string,
-};
+// const propTypes = {
+//   containerProps: PropTypes.object,
+//   startadornment: PropTypes.object,
+//   endadornment: PropTypes.object,
+//   placeholder: PropTypes.string,
+//   label: PropTypes.object,
+//   value: PropTypes.string,
+//   name: PropTypes.string.isRequired,
+//   type: PropTypes.string,
+// };
 
-export default function FormField({
+export default ({
   containerProps,
   startadornment,
   endadornment,
@@ -34,7 +33,7 @@ export default function FormField({
   type,
   as,
   ...props
-}) {
+}) => {
   const Render = props.component && useComponent ? props.component : Field;
 
   return (
@@ -85,6 +84,4 @@ export default function FormField({
       </Form.Group>
     </ErrorBoundary>
   );
-}
-
-FormField.propTypes = propTypes;
+};
