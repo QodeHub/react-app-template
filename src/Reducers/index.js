@@ -10,7 +10,7 @@ const rootKey = process.env.REACT_APP_ROOT_KEY;
  */
 export const rootState = {
   isAuthenticated: false,
-  user: null
+  user: null,
 };
 
 /**
@@ -18,7 +18,7 @@ export const rootState = {
  */
 const reducers = {
   "auth.login": auth.login,
-  "auth.logout": auth.logout
+  "auth.logout": auth.logout,
 };
 
 /**

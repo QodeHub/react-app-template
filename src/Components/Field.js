@@ -1,25 +1,25 @@
 import React from "react";
 import { ErrorMessage, Field } from "formik";
 import { Form } from "react-bootstrap";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 
 import { ErrorBoundary } from "Utils";
 
 /**
  * props
  */
-// const propTypes = {
-//   containerProps: PropTypes.object,
-//   startadornment: PropTypes.object,
-//   endadornment: PropTypes.object,
-//   placeholder: PropTypes.string,
-//   label: PropTypes.object,
-//   value: PropTypes.string,
-//   name: PropTypes.string.isRequired,
-//   type: PropTypes.string,
-// };
+const propTypes = {
+  containerProps: PropTypes.object,
+  startadornment: PropTypes.object,
+  endadornment: PropTypes.object,
+  placeholder: PropTypes.string,
+  label: PropTypes.any,
+  value: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  type: PropTypes.string,
+};
 
-export default ({
+function Fld({
   containerProps,
   startadornment,
   endadornment,
@@ -33,13 +33,13 @@ export default ({
   type,
   as,
   ...props
-}) => {
+}) {
   const Render = props.component && useComponent ? props.component : Field;
 
   return (
     <ErrorBoundary>
       <Form.Group controlId={name} {...containerProps}>
-        {label && <Form.Label {...label?.props}>{label?.value}</Form.Label>}
+        {label && <Form.Label>{label}</Form.Label>}
         <div
           className={`position-relative d-flex align-items-center ${
             startadornment || endadornment ? "input-container" : ""
@@ -84,4 +84,8 @@ export default ({
       </Form.Group>
     </ErrorBoundary>
   );
-};
+}
+
+Fld.propTypes = propTypes;
+
+export default Fld;

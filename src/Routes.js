@@ -1,14 +1,7 @@
 import React from "react";
-/**
- * packages
- */
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import { ScrollToTop } from "Components";
-
-/**
- * Route to base components
- */
 import Home from "Views/Home";
 
 export default function Routes() {

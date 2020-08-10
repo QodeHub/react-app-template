@@ -15,7 +15,7 @@ const propTypes = {
 export default function Modal({ body, onHide, show, header, ...props }) {
   return (
     <Mdl onHide={() => {}} centered show={show} {...props}>
-      <Mdl.Body className={body + " p-32"}>
+      <Mdl.Body className={`${body} p-32`}>
         {onHide && (
           <div className="d-flex align-items-center mb-32">
             <span className="cursor-pointer d-block mr-2 mt-1" onClick={onHide}>

@@ -1,6 +1,7 @@
 import React from "react";
-import Select, { components } from "react-select";
+import Slt, { components } from "react-select";
 import { Image } from "react-bootstrap";
+import PropTypes from "prop-types";
 
 import { ErrorBoundary } from "Utils";
 
@@ -14,6 +15,12 @@ const iconStyle = {
   maxWidth: "100%",
   display: "block",
   marginRight: 8,
+};
+
+const propTypes = {
+  options: PropTypes.array.isRequired,
+  onlyOptions: PropTypes.array,
+  value: PropTypes.any.isRequired,
 };
 
 export function Content({ children, ...props }) {
@@ -31,7 +38,7 @@ export function Content({ children, ...props }) {
   );
 }
 
-export default ({ options, onlyOptions, value, ...props }) => {
+function Select({ options, onlyOptions, value, ...props }) {
   const SelectComponents = {
     Option: ({ children, ...props }) => (
       <Option {...props}>
@@ -82,7 +89,7 @@ export default ({ options, onlyOptions, value, ...props }) => {
 
   return (
     <ErrorBoundary>
-      <Select
+      <Slt
         {...props}
         value={_value}
         options={_options}
@@ -91,4 +98,8 @@ export default ({ options, onlyOptions, value, ...props }) => {
       />
     </ErrorBoundary>
   );
-};
+}
+
+Select.propTypes = propTypes;
+
+export default Select;

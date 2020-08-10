@@ -16,7 +16,7 @@ const defaultProps = {
   contained: false,
 };
 
-export default function Spinner({ size, color, center, contained, ...props }) {
+function Spinner({ size, color, center, contained, ...props }) {
   return (
     <div
       className={`${center && "vertically-center"} ${
@@ -30,3 +30,5 @@ export default function Spinner({ size, color, center, contained, ...props }) {
 
 Spinner.propTypes = propTypes;
 Spinner.defaultProps = defaultProps;
+
+export default Spinner;

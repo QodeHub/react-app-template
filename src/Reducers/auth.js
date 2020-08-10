@@ -9,5 +9,5 @@ export const logout = () => {
   return rootState;
 };
 
-export const setToken = accessToken =>
+export const setToken = (accessToken) =>
   (localStorage["access_token"] = accessToken);

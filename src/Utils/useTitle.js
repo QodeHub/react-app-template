@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const useTitle = title => {
+const useTitle = (title) => {
   useEffect(() => {
     document.title = title.trim() + " - " + process.env.REACT_APP_TITLE_SUFFIX;
   }, [title]);

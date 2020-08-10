@@ -1,14 +1,29 @@
 import React from "react";
 import { Button as Btn } from "react-bootstrap";
+import PropTypes from "prop-types";
+
 import Spinner from "./Spinner";
 
-const Button = ({
+const propTypes = {
+  isValid: PropTypes.bool,
+  isSubmitting: PropTypes.bool,
+  loadingColor: PropTypes.string,
+  value: PropTypes.any,
+};
+
+const defaultProps = {
+  isValid: false,
+  isSubmitting: false,
+  loadingColor: "#fff",
+};
+
+function Button({
   isValid = false,
   isSubmitting,
-  value,
   loadingColor,
+  value,
   ...props
-}) => {
+}) {
   return (
     <Btn
       {...props}
@@ -24,6 +39,9 @@ const Button = ({
       )}
     </Btn>
   );
-};
+}
+
+Button.propTypes = propTypes;
+Button.defaultProps = defaultProps;
 
 export default Button;

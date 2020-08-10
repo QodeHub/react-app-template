@@ -3,7 +3,6 @@
   .#{$name}-bg {
     background-color: $color !important;
   }
-
   .#{$name}-text {
     color: $color !important;
   }
@@ -130,6 +129,15 @@
   }
 }
 
-.-cursor-pointer {
+// line height
+$height: 10;
+@while $height <=20 {
+  .line-height-#{$height} {
+    line-height: ($height / 10) !important;
+  }
+  $height: $height + 1;
+}
+
+.cursor-pointer {
   cursor: pointer;
 }
