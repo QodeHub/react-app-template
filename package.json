@@ -14,7 +14,7 @@
     "axios": "^0.19.2",
     "customize-cra": "^0.9.1",
     "formik": "^2.1.4",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "moment": "^2.24.0",
     "node-sass": "^4.13.1",
     "prop-types": "^15.7.2",
