@@ -31,6 +31,7 @@
     "react-textarea-autosize": "^7.1.2",
     "react-toastify": "^5.5.0",
     "reactn": "^2.2.6",
+    "styled-components": "^5.1.1",
     "swr": "^0.2.2",
     "typescript": "^3.8.3",
     "yup": "^0.28.1"

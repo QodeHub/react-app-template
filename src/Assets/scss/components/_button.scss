@@ -1,0 +1,32 @@
+.btn {
+  display: flex;
+  font-size: 16px;
+  font-weight: 700;
+  border-width: 1px;
+  border-radius: 4px;
+  border-style: solid;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn--default {
+  height: 48px;
+  color: $white !important;
+  border-color: $default !important;
+  background-color: $default !important;
+
+  &[aria-expanded="true"] {
+    background-color: $default !important;
+  }
+}
+
+.btn--default-reverse {
+  height: 48px;
+  color: $default !important;
+  background-color: $white !important;
+  border-color: $default !important;
+
+  &[aria-expanded="true"] {
+    background-color: $white !important;
+  }
+}

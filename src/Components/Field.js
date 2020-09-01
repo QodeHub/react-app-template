@@ -14,7 +14,7 @@ const propTypes = {
   endadornment: PropTypes.object,
   placeholder: PropTypes.string,
   label: PropTypes.any,
-  value: PropTypes.string,
+  value: PropTypes.any,
   name: PropTypes.string.isRequired,
   type: PropTypes.string,
 };
@@ -41,19 +41,15 @@ function Fld({
       <Form.Group controlId={name} {...containerProps}>
         {label && <Form.Label>{label}</Form.Label>}
         <div
-          className={`position-relative d-flex align-items-center ${
+          className={`${
             startadornment || endadornment ? "input-container" : ""
           }`}
         >
           {startadornment && (
             <span
-              className={`start-adornment ${
-                startadornment?.props?.className || ""
-              }`}
-              {...startadornment?.props}
-            >
-              {startadornment.children}
-            </span>
+              className={`start-adornment ${startadornment.className || ""}`}
+              {...startadornment}
+            />
           )}
           <Render
             className={`form-control ${className || ""} ${
@@ -71,11 +67,9 @@ function Fld({
 
           {endadornment && (
             <span
-              className={`end-adornment ${endadornment?.props?.className}`}
-              {...endadornment?.props}
-            >
-              {endadornment.children}
-            </span>
+              className={`end-adornment ${endadornment?.className}`}
+              {...endadornment}
+            />
           )}
         </div>
         <ErrorMessage name={name}>

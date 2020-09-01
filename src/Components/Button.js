@@ -28,7 +28,7 @@ function Button({
     <Btn
       {...props}
       variant="default"
-      className={`btn ${props.className}`}
+      className={props.className}
       {...(isSubmitting && { disabled: true })}
       {...(!isValid && { disabled: true })}
     >

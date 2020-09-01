@@ -1,6 +1,7 @@
 // colors
 $red: #da3d2a;
 $green: #44ab65;
+$white: #ffffff;
 $default: #000000;
 $pale-grey: #fafbfc;
 $light-periwinkle: #dfe2e6;
@@ -11,6 +12,7 @@ $colors: map-merge(
   (
     "red": $red,
     "green": $green,
+    "white": $white,
     "default": $default,
     "pale-grey": $pale-grey,
     "light-periwinkle": $light-periwinkle,
@@ -40,3 +42,12 @@ $grids: (
 
 // font weights
 $weights: (400, 500, 600, 700, 800);
+
+:root {
+  --red: #da3d2a;
+  --green: #44ab65;
+  --white: #ffffff;
+  --default: #000000;
+  --pale-grey: #fafbfc;
+  --light-periwinkle: #dfe2e6;
+}

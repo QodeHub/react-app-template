@@ -9,12 +9,12 @@ label {
 
 .form-control {
   border: solid 1px $light-periwinkle !important;
-  padding: 0px 16px;
-  height: 48px;
-  border-radius: 4px;
-  font-size: 16px;
   box-shadow: none !important;
+  border-radius: 4px;
+  padding: 0px 16px;
+  font-size: 16px;
   outline: none;
+  height: 48px;
 
   &:focus {
     border-color: lighten($default, 40%) !important;
@@ -32,15 +32,30 @@ label {
 
 .input-container {
   border: solid 1px $light-periwinkle;
-  padding: 0px 16px;
+  align-items: center;
   border-radius: 4px;
+  position: relative;
+  padding: 0px 16px;
+  overflow: hidden;
+  display: flex;
+
+  .start-adornment,
+  .end-adornment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   &:focus-within {
-    border-color: lighten($default, 40%);
+    border-color: lighten($default, 40%) !important;
   }
 
   .form-control {
     border: none;
     height: 46px;
+  }
+
+  input {
+    background-color: transparent !important;
   }
 }
