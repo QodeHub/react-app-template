@@ -1,12 +1,13 @@
 // import partials
-@import "functions";
 @import "variables";
 @import "resets";
 @import "utils";
 
+@import "components/dropdown";
 @import "components/button";
 @import "components/table";
 @import "components/form";
+@import "components/tabs";
 @import "toast/main";
 
 // media queries partials

@@ -28,6 +28,10 @@ label {
   &.--border-none {
     border: none !important;
   }
+
+  &:disabled {
+    // background-color: $pale-grey-1;
+  }
 }
 
 .input-container {
@@ -38,6 +42,7 @@ label {
   padding: 0px 16px;
   overflow: hidden;
   display: flex;
+  height: 48px;
 
   .start-adornment,
   .end-adornment {

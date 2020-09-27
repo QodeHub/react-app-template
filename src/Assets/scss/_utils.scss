@@ -113,13 +113,6 @@
       $space: $space + 2;
     }
 
-    $auto: "auto";
-
-    .mx-#{$grid-name}#{$auto} {
-      margin-left: auto !important;
-      margin-right: auto !important;
-    }
-
     // buttons
     @each $i in (32, 36, 40, 48, 56, 64, 72) {
       .btn-#{$grid-name}#{$i} {

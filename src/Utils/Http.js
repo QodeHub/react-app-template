@@ -17,8 +17,9 @@ export const Http = axios.create({
 
 Http.interceptors.request.use((config) => {
   const url = config?.url?.split("/") || [];
+  const unAuthRoutes = ["login", "forgotten"];
 
-  if (!["login", "forgotten"].includes(url[1]))
+  if (unAuthRoutes.filter((x) => url.includes(x)).length === 0)
     config.headers["Authorization"] = `Bearer ${localStorage["access_token"]}`;
 
   return config;

@@ -1,0 +1,45 @@
+.nav-tabs {
+  border: none;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+
+  .nav-link {
+    height: 60px;
+    display: flex;
+    color: $default;
+    font-size: 14px;
+
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 0px;
+
+    padding: 0px;
+    padding-left: 8px;
+    padding-right: 8px;
+
+    align-items: center;
+
+    border: none !important;
+    border-bottom: solid 3px transparent !important;
+
+    &:first-child {
+      margin-left: 0px;
+    }
+    &:last-child {
+      margin-right: 0px;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      outline: none;
+    }
+
+    &.active {
+      border: none;
+      color: $default;
+      border-bottom: solid 3px $default !important;
+    }
+  }
+}

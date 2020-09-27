@@ -1,0 +1,48 @@
+.dropdown,
+.dropup {
+  &-toggle {
+    background-color: transparent !important;
+    border-radius: 32px !important;
+    box-shadow: none !important;
+    border: none !important;
+    outline: none;
+    padding: 8px;
+
+    &.rounded {
+      border-radius: 4px !important;
+    }
+
+    &::after,
+    &::before {
+      display: none !important;
+    }
+
+    &[aria-expanded="true"] {
+      background-color: rgba(51, 51, 51, 0.03) !important;
+    }
+  }
+
+  &-item {
+    &:active,
+    &:focus {
+      background-color: $pale-grey;
+      box-shadow: none;
+      color: $default;
+      outline: none;
+    }
+  }
+
+  &-menu {
+    box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.12);
+    padding-bottom: 8px;
+    border-radius: 4px;
+    padding-top: 8px;
+    border: none;
+
+    .dropdown-item {
+      padding-bottom: 10px;
+      padding-top: 10px;
+      font-size: 14px;
+    }
+  }
+}
