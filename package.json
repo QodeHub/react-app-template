@@ -17,7 +17,7 @@
     "formik": "^2.1.4",
     "lodash": "^4.17.19",
     "moment": "^2.24.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-app-rewired": "^2.1.5",
