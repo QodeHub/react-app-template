@@ -13,7 +13,7 @@
     "@types/react": "^16.9.25",
     "axios": "^0.19.2",
     "customize-cra": "^0.9.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "formik": "^2.1.4",
     "lodash": "^4.17.19",
     "moment": "^2.24.0",
